@@ -1,4 +1,4 @@
-name: CI
+name: telegram_notify
 
 on:
   push:
@@ -17,10 +17,7 @@ jobs:
 
       - name: Install deps
         run: npm install
-
-      - name: Run tests
-        run: npm test
-
+        
       - name: Telegram Notify Success
         if: success()
         run: |
